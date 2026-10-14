@@ -178,6 +178,6 @@ For an archival publication release, we recommend preserving:
 
 ## Citation and archival release
 
-If you use this repository, please cite the associated journal article once its bibliographic details are available.
+This repository contains the source code and experimental results supporting a research study on At and By QUBO formulations for open-pit mine scheduling using BF-DCQO.
 
-A `CITATION.cff` file, article DOI, author information, and repository license should be added after confirmation with all contributors.
+If you use this work, please cite the associated scientific publication once its bibliographic information becomes available.
