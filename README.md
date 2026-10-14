@@ -27,18 +27,18 @@ README.md                        Repository documentation
 
 ## Requirements
 
-The experiments were developed using **Python 3.8.20** (Conda environment) with the following primary dependencies:
+The numerical experiments were run in a **Linux Conda environment**. The environment package listing reports **Python 3.12.12**, with a separate `cpython` package at **3.12.13**; confirm the active interpreter using `python --version` before preparing the archival release. The principal recorded package versions are:
 
 | Package | Version |
 |---|---|
-| NumPy | 1.24.4 |
-| SciPy | 1.10.1 |
-| Matplotlib | 3.7.5 |
-| Qiskit | 1.2.0 |
-| Qiskit Aer | 0.15.0 |
-| GurobiPy | 11.0.3 |
+| NumPy | 2.5.0 |
+| SciPy | 1.18.0 |
+| Matplotlib | 3.11.0 |
+| Qiskit | 2.4.2 |
+| Qiskit Aer | 0.17.2 |
+| GurobiPy | 13.0.3 |
 
-The list of project dependencies is provided in [`requirements.txt`](requirements.txt).
+The pinned Python package requirements are listed in [`requirements.txt`](requirements.txt). They are based on the Linux Conda package inventory, **not yet validated as a fresh pip installation**. The Conda inventory reports a `py310` build tag for `qiskit` alongside Python 3.12 packages, so confirm the imported Qiskit version in the environment before claiming exact reproducibility.
 
 Random-instance scripts additionally require a working Gurobi license.
 
@@ -46,7 +46,9 @@ The experiments use Qiskit Aer for classical simulation of quantum circuits. CPU
 
 ### Environment setup
 
-Create a virtual environment using a compatible Python version:
+For a new environment, use a compatible Python 3.12 installation. For the closest match to the research environment, prefer Conda on Linux; the commands below describe a pip-based setup, not an exact recreation of the Conda build configuration.
+
+Create a virtual environment:
 
 ```bash
 python -m venv .venv
@@ -72,7 +74,7 @@ Install the dependencies:
 python -m pip install -r requirements.txt
 ```
 
-Alternatively, an existing Conda environment can be used, provided that the required package versions are installed.
+Alternatively, create or use a Conda environment on Linux with the documented versions. Because the recorded Gurobi package is `gurobi` from the Gurobi Conda channel, installing `gurobipy` through pip may differ from the original setup. Check licensing separately. Before releasing an exact environment specification, export and validate a Conda `environment.yml` from the experiment machine.
 
 ## Running the experiments
 
