@@ -1,0 +1,9 @@
+# Tested environment: Python 3.8.20 (conda-forge, Windows x86_64)
+# Versions recorded from the qiskit-basic environment.
+# Dependencies used by the BF-DCQO experiments and figure scripts.
+numpy==1.24.4
+scipy==1.10.1
+matplotlib==3.7.5
+qiskit==1.2.0
+qiskit-aer==0.15.0
+gurobipy==11.0.3
